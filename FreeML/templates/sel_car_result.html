@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="jumbotron">
+        <h1 class="display-4">Selección de características</h1>
+        <p>Podrás identificar posibles correlaciones entre las variables de tus datos.</p>
+    </div>
+    <p>Resultado</p>
+    <div class = "container">
+        <div class = "jumbotron">
+            <img src = '../static/heatmap.png' alt = ''>
+        </div>
+    </div>
+    <ol>
+        {{matrizcorr}}
+    </ol>
+
+{% endblock %}

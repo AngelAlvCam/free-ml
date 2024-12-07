@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="jumbotron">
+        <h1 class="display-4">Selección de características</h1>
+        <p>Podrás identificar posibles correlaciones entre las variables de tus datos.</p>
+    </div>
+    <form method="POST" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+        {{ form.input_file.label }}{{ form.input_file() }}
+        <br>
+        {{ form.submit }}
+    </form>
+{% endblock %}

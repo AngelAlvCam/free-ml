@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="jumbotron">
+        <h1 class="display-4">Métricas de distancia</h1>
+        <p>Calcula la distancia entre objetos.</p>
+    </div>
+    <form method="POST" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+        {{ form.input_file.label }}{{ form.input_file() }}
+        <br>
+        {{ form.metric.label }}{{ form.metric() }}
+        <br>
+        {{ form.std.label }}{{ form.std() }}
+        <br>
+        {{ form.submit }}
+    </form>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="jumbotron">
+        <h1 class="display-4">Algoritmo apriori</h1>
+        <p>Obtenga reglas de asociacion a partir de un archivo de datos transaccionales en formato CSV.</p>
+    </div>
+    <form method="POST" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+        {{ form.input_file.label }}{{ form.input_file() }}
+        <br>
+        {{ form.min_support.label }}{{ form.min_support() }}
+        <br>
+        {{ form.min_confidence.label }}{{ form.min_confidence() }}
+        <br>
+        {{ form.min_lift.label }}{{ form.min_lift() }}
+        <br>
+        {{ form.submit }}
+    </form>
+{% endblock %}

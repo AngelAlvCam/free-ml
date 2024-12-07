@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="jumbotron">
+        <h1 class="display-4">Algoritmo apriori</h1>
+        <p>Obtenga reglas de asociacion a partir de un archivo de datos transaccionales en formato CSV.</p>
+    </div>
+    <h2>Resultado</h2>
+    <p>De los datos adjuntados se obtuvieron las siguientes reglas; se encuentran ordenadas en orden descendente
+        respecto a su nivel de significatividad.
+    </p>
+    <ol>
+        {%for item in reglas %}
+            <li>{{item}}</li>
+        {% endfor %} 
+    </ol>
+
+{% endblock %}
